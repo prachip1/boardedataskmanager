@@ -1,10 +1,12 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "index.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "index.js" }
-    ]
+  "version": 2,
+  "functions": {
+    "api/sendingEmail.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "RESEND_API_KEY": "re_LJuMF9kY_7xGissDAHtaVZmeVLtLmuNPt"
   }
-  
+}
