@@ -1,12 +1,7 @@
 {
   "version": 2,
-  "functions": {
-    "api/sendingEmail.js": {
-      "memory": 128,
-      "maxDuration": 10
-    }
-  },
-  "env": {
-    "RESEND_API_KEY": "re_LJuMF9kY_7xGissDAHtaVZmeVLtLmuNPt"
-  }
+   "rewrites": [{
+    "source": "/(.*)",
+    "destination": "/api"
+   }]
 }
